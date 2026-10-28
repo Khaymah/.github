@@ -1,0 +1,78 @@
+name: "🏕️ اقتراح مشروع / Project proposal"
+description: "اقترح انضمام مشروعك إلى خيمة"
+title: "[اقتراح مشروع]: "
+labels: ["project-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكرًا لرغبتك في إضافة مشروعك إلى خيمة! اقرأ [شروط القبول](https://github.com/khaymah/.github/blob/main/CONTRIBUTING.md#ثانيًا-إضافة-مشروع-جديد-إلى-خيمة) قبل التعبئة.
+  - type: input
+    id: name
+    attributes:
+      label: اسم المشروع
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: رابط المستودع الحالي
+      placeholder: https://github.com/username/project
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: ما الذي يفعله المشروع؟
+      description: وصف قصير للمشروع والمشكلة التي يحلّها.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: لماذا تريد ضمّه إلى خيمة؟
+      description: ما الفائدة للمجتمع العربي أو التقني؟
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: الرخصة
+      options:
+        - MIT
+        - Apache-2.0
+        - GPL-3.0
+        - BSD-3-Clause
+        - MPL-2.0
+        - أخرى (اذكرها في الملاحظات)
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: حالة المشروع
+      options:
+        - فكرة / بداية
+        - قيد التطوير
+        - مستقر ومستخدم
+    validations:
+      required: true
+  - type: input
+    id: maintainers
+    attributes:
+      label: المشرفون
+      description: أسماء حسابات GitHub لمن سيتابع المشروع.
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: ملاحظات إضافية
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: التزام
+      options:
+        - label: قرأت دليل المساهمة وأوافق على ميثاق السلوك.
+          required: true

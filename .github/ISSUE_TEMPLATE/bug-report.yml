@@ -1,0 +1,29 @@
+name: "🐞 بلاغ عن مشكلة / Bug report"
+description: "أبلغ عن خطأ في أحد مشاريع خيمة"
+title: "[مشكلة]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: ما المشكلة؟
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: خطوات تكرار المشكلة
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: ما الذي توقعت حدوثه؟
+  - type: input
+    id: env
+    attributes:
+      label: البيئة
+      placeholder: "نظام التشغيل، الإصدار، المتصفح..."
